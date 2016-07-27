@@ -12,17 +12,15 @@ import (
 func main() {
 	var fp *os.File
 	var err error
-	if len(os.Args) < 2 {
-		log.Fatal("usage: Reply replay_log_path")
-		os.Exit(9)
-	}
 	var (
-		maxWorkers   = flag.Int("max_workers", 5, "the number of workers to start")
-		maxQueueSize = flag.Int("max_queue_size", 100, "the ize of job queue")
+		maxWorkers   = flag.Int("max_workers", 5, "the number of workers")
+		maxQueueSize = flag.Int("max_queue_size", 100, "the size of job queue")
 		targetUrl    = flag.String("target_url", "http://127.0.0.1/target", "target url")
+		filePath	= flag.String("replay_log_path", "replay_log.txt", "replay_log_path")
 	)
 	flag.Parse()
-	fp, err = os.Open(os.Args[1])
+	log.Printf("max_workers %d max_queue_size %d target_url %s replay_log_path %s ", *maxWorkers, *maxQueueSize, *targetUrl, *filePath)
+	fp, err = os.Open(*filePath)
 	if err != nil {
 		panic(err)
 	}
