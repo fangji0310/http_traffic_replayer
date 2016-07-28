@@ -31,13 +31,13 @@ func (worker HttpRequestWorker) Proceed(url string, job HttpJob) {
 }
 
 func generateRequest(url string, job HttpJob) (*http.Request, error) {
-	if job.Method == "Get" {
+	if strings.ToUpper(job.Method) == "GET" {
 		return get(url, job)
 	}
 	return post(url, job)
 }
 func get(url string, job HttpJob) (request *http.Request, err error) {
-	req, reqErr := http.NewRequest(job.Method, url+job.Path, nil)
+	req, reqErr := http.NewRequest("GET", url+job.Path, nil)
 	if reqErr != nil {
 		log.Print(reqErr)
 		err = reqErr
@@ -51,7 +51,7 @@ func get(url string, job HttpJob) (request *http.Request, err error) {
 }
 func post(url string, job HttpJob) (request *http.Request, err error) {
 	params := generateParameters(job)
-	req, reqErr := http.NewRequest(job.Method, url+job.Path, strings.NewReader(params.Encode()))
+	req, reqErr := http.NewRequest("POST", url+job.Path, strings.NewReader(params.Encode()))
 	if reqErr != nil {
 		log.Print(reqErr)
 		err = reqErr

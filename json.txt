@@ -1,8 +1,2 @@
-{"request_time":"2016/07/01 12:00:00","method":"Get","path":"/1","parameters":[]}
-{"request_time":"2016/07/01 12:00:05","method":"Get","path":"/2","parameters":[{"key":"key1","value":"val1"},{"key":"key2","value":"val2"}]}
-{"request_time":"2016/07/01 12:00:10","method":"Get","path":"/3","parameters":[{"key":"key1","value":"val1"},{"key":"key2","value":"val2"}]}
-{"request_time":"2016/07/01 12:00:11","method":"Get","path":"/4","parameters":[]}
-{"request_time":"2016/07/01 12:00:15","method":"Get","path":"/5","parameters":[]}
-{"request_time":"2016/07/01 12:00:15","method":"Get","path":"/6","parameters":[]}
-{"request_time":"2016/07/01 12:01:15","method":"Get","path":"/7","parameters":[{"key":"key1","value":"val1"},{"key":"key2","value":"val2"}]}
-{"request_time":"2016/07/01 12:03:01","method":"Get","path":"/7","parameters":[{"key":"key1","value":"val1"},{"key":"key2","value":"val2"}]}
+{"request_time":"2016/07/01 12:00:00","method":"GET","path":"/pickup/6209196","parameters":[]}
+{"request_time":"2016/07/01 12:00:05","method":"GET","path":"/pickup/6209204","parameters":[{"key":"key1","value":"val1"},{"key":"key2","value":"val2"}]}
