@@ -1,2 +1,2 @@
-{"request_time":"2016/07/01 12:00:00","method":"GET","path":"/pickup/6209196","parameters":[]}
-{"request_time":"2016/07/01 12:00:05","method":"GET","path":"/pickup/6209204","parameters":[{"key":"key1","value":"val1"},{"key":"key2","value":"val2"}]}
+{"request_time":"2016/07/01 12:00:00","method":"GET","path":"/path1","parameters":[]}
+{"request_time":"2016/07/01 12:00:05","method":"GET","path":"/path2","parameters":[{"key":"key1","value":"val1"},{"key":"key2","value":"val2"}]}

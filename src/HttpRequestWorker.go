@@ -55,6 +55,7 @@ func post(url string, job HttpJob) (request *http.Request, err error) {
 	if reqErr != nil {
 		log.Print(reqErr)
 		err = reqErr
+		return
 	}
 	req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
 	request = req
